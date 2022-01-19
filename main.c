@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define swap(x, y)     (x ^= y, y = x ^ y, x ^= y)
+#define swap(x, y)     int temp = x; x = y; y = temp;
 #define reps(i, x, n)  for (int i = x; i < (int)(n); i++)
 #define rep(i, n)      reps(i, 0, n)
 
@@ -27,8 +27,8 @@ int main(void) {
     memcpy(results2, scores2, sizeof(scores2));
 
     printf("\n実行例2\n");
-    selection_sort_array(results2, SIZE);
-    print_array(scores2, results2, SIZE);
+    selection_sort_array(results2, SIZE2);
+    print_array(scores2, results2, SIZE2);
 
     return 0;
 }
