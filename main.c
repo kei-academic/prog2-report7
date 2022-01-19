@@ -36,7 +36,7 @@ int main(void) {
 
 // 選択ソート
 void selection_sort_array(int A[], int N) {
-    rep(i, N) {
+    rep(i, N-1) {
         int max_position = i;
         int max_value = A[i];
         reps(j, i+1, N) {
